@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mix_products",
+  "info": {
+    "name": "MixProduct"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "nameMix": {
+      "type": "string",
+      "required": true
+    },
+    "priceMix": {
+      "type": "float",
+      "required": true
+    },
+    "regularMix": {
+      "type": "float"
+    },
+    "imageMix": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "inStockMix": {
+      "type": "integer",
+      "required": true
+    },
+    "descriptionMix": {
+      "type": "richtext"
+    }
+  }
+}
